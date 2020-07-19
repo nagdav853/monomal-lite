@@ -361,24 +361,3 @@ call <sid>hi('BufTabLineCurrent', s:voidBlack, s:voidGray4, 'none')
 call <sid>hi('BufTabLineFill', s:voidBlack, s:voidBlack, 'none')
 call <sid>hi('BufTabLineHidden', s:voidGray3, s:voidBlack2, 'none')
 
-" Airline
-
-let g:airline#themes#monochrome#palette = {}
-
-function! airline#themes#monochrome#refresh()
-  let s:SL = airline#themes#get_highlight('StatusLine')
-  let s:SLNC = airline#themes#get_highlight('StatusLineNC')
-
-  let g:airline#themes#monochrome#palette.normal = airline#themes#generate_color_map(s:SL, s:SL, s:SL)
-  let g:airline#themes#monochrome#palette.insert = g:airline#themes#monochrome#palette.normal
-  let g:airline#themes#monochrome#palette.replace = g:airline#themes#monochrome#palette.normal
-  let g:airline#themes#monochrome#palette.visual = g:airline#themes#monochrome#palette.normal
-  let g:airline#themes#monochrome#palette.normal.airline_error   = s:SLNC
-  let g:airline#themes#monochrome#palette.normal.airline_warning = s:SLNC
-  let g:airline#themes#monochrome#palette.normal.airline_term    = s:SL
-
-  let g:airline#themes#monochrome#palette.inactive = airline#themes#generate_color_map(s:SLNC, s:SLNC, s:SLNC)
-endfunction
-
-call airline#themes#monochrome#refresh()
-
