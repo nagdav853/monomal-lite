@@ -12,7 +12,6 @@ let g:colors_name="monomal-lite"
 " ==========================
 " Highlighting Function
 " ==========================
-"  >> (inspired by https://github.com/tomasiser/vim-code-dark and https://github.com/chriskempson/base16-vim)
 fun! <sid>hi(group, fg, bg, attr)
   if !empty(a:fg)
     exec "hi " . a:group . " guifg=" . a:fg.gui . " ctermfg=" .  a:fg.cterm256
@@ -72,7 +71,7 @@ call <sid>hi('Visual', s:none, s:voidGray2, 'none')
 " General
 call <sid>hi('Boolean', s:voidSteel, s:none, 'none')
 call <sid>hi('Character', s:voidSteel, s:none, 'none')
-call <sid>hi('Comment', s:voidGray3, s:none, 'none')
+call <sid>hi('Comment', s:voidGray3, s:none, 'italic')
 call <sid>hi('Conditional', s:voidSteel, s:none, 'none')
 call <sid>hi('Constant', s:voidSteel, s:none, 'none')
 call <sid>hi('Define', s:voidSteel, s:none, 'none')
